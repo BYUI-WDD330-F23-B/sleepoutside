@@ -17,8 +17,14 @@
   <body>
 
     <main class="divider">
-        
-
+        <!-- A basic login form with an email(username) and a password  should have name attributes for email and password, and a submit button-->
+        <form id="login-form">
+            <label for="username">Username</label>
+            <input type="email" id="username" name="username" required value="user1@email.com"/>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit" id="login">Login</button>
+        </form>
     </main>
 
     <footer id="main-footer"></footer>

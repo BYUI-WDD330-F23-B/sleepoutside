@@ -36,3 +36,26 @@ export async function checkout(dataInput)
   };
   return await fetch(baseURL + "checkout/", opt).then(convertToJson);
 }
+
+export async function getOrders(token)
+{
+  const opt = {
+    method: "GET",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+    },
+  };
+  return await fetch(baseURL + "orders/", opt).then(convertToJson);
+}
+
+export async function loginRequest(credentials)
+{
+  const opt = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(credentials),
+  };
+  return await fetch(baseURL + "login/", opt).then(convertToJson);
+}

@@ -1,7 +1,10 @@
 import { loadHeaderFooter } from "./utils.mjs";
 import checkoutProcess from "./checkoutProcess.mjs";
+import {checkLogin} from "./auth.mjs"
+
 
 loadHeaderFooter();
+checkLogin();
 
 checkoutProcess.init("so-cart", ".checkout-summary");
 checkoutProcess.displayOrderSummary();
